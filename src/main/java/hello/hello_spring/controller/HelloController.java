@@ -18,6 +18,6 @@ public class HelloController {
     @GetMapping("hello-mvc")
     public String helloMvc(@RequestParam("name") String name, Model model) {
         model.addAttribute("name", name); // 키와 값
-        return "hello-template"; // hello-template.html 파일 실행
+        return "hello-template"; // hello-template.html 파일 처리
     }
 }
