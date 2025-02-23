@@ -1,5 +1,6 @@
 package hello.hello_spring.service;
 
+import hello.hello_spring.aop.TimeTraceAop;
 import hello.hello_spring.repository.*;
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,5 +44,15 @@ public class SpringConfig {
 ////        return new JdbcMemberRepository(dataSource);
 ////        return new JdbcTemplateMemberRepository(dataSource);
 ////        return new JpaMemberRepository(em);
+//    }
+
+    @Bean
+    public MemberService memberService2() {
+        return new MemberService(memberRepository);
+    }
+
+//    @Bean
+//    public TimeTraceAop timeTracesAop() {
+//        return new TimeTraceAop();
 //    }
 }
