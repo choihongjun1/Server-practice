@@ -122,4 +122,8 @@ public class JdbcMemberRepository implements MemberRepository {
             close(conn, pstmt, rs);
         }
     }
+
+    private Connection getConnection() {
+        return DataSourceUtils.getConnection(dataSource);
+    }
 }
