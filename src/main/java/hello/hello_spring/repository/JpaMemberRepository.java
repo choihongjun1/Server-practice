@@ -33,6 +33,6 @@ public class JpaMemberRepository implements MemberRepository {
 
     @Override
     public List<Member> findAll() {
-        return List.of();
+        return em.createQuery("select m from Member m", Member.class).getResultList();
     }
 }
