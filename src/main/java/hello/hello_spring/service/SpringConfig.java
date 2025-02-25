@@ -46,11 +46,6 @@ public class SpringConfig {
 ////        return new JpaMemberRepository(em);
 //    }
 
-    @Bean
-    public MemberService memberService2() {
-        return new MemberService(memberRepository);
-    }
-
 //    @Bean
 //    public TimeTraceAop timeTracesAop() {
 //        return new TimeTraceAop();
